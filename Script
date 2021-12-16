@@ -1,0 +1,46 @@
+MainFrame = Instance.new("Frame")
+Speed = Instance.new("TextButton")
+
+
+
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = OPFinality
+MainFrame.Active = true
+MainFrame.BackgroundColor3 = Color3.new(1, 1, 1)
+MainFrame.BackgroundTransparency = 1
+MainFrame.BorderSizePixel = 0
+MainFrame.ClipsDescendants = true
+MainFrame.Draggable = true
+MainFrame.Position = UDim2.new(0, 402, 0, 162)
+MainFrame.Size = UDim2.new(0, 442, 0, 293)
+Speed.Name = "Auto Click"
+Speed.Parent = BackGroundChar
+Speed.BackgroundColor3 = Color3.new(0.180392, 0.8, 0.443137)
+Speed.BorderSizePixel = 0
+Speed.Position = UDim2.new(0, 0, 0.0848813578, 0)
+Speed.Size = UDim2.new(0, 92, 0, 25)
+Speed.Font = Enum.Font.SourceSans
+Speed.FontSize = Enum.FontSize.Size24
+Speed.Text = "Speed"
+Speed.TextColor3 = Color3.new(0.92549, 0.941177, 0.945098)
+Speed.TextSize = 22
+
+
+Speed.MouseButton1Click:connect(function()
+getgenv().farmer = true;
+
+while wait() do
+    if getgenv().farmer == true then
+       game:service'ReplicatedStorage'.Remotes.addCash:FireServer()
+  end
+end
+
+Speed.MouseButton1Click:disconnect(function()
+getgenv().farmer = false;
+
+---while wait() do
+   --- if getgenv().farmer == true then
+     ---  game:service'ReplicatedStorage'.Remotes.addCash:FireServer()
+  ---end
+---end
