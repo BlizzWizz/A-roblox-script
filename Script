@@ -33,8 +33,10 @@ getgenv().farmer = true;
 while wait() do
     if getgenv().farmer == true then
        game:service'ReplicatedStorage'.Remotes.addCash:FireServer()
-  end
-end
+        end
+    end
+end)
+
 
 Speed.MouseButton1Click:disconnect(function()
 getgenv().farmer = false;
@@ -44,3 +46,4 @@ getgenv().farmer = false;
      ---  game:service'ReplicatedStorage'.Remotes.addCash:FireServer()
   ---end
 ---end
+end)
